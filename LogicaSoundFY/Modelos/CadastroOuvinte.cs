@@ -20,13 +20,17 @@ namespace LogicaSoundFY.Modelos
             string emailOuvinte = Console.ReadLine()!;
 
             Ouvinte novoOuvinte = new Ouvinte(nomeOuvinte, emailOuvinte);
-        
+
             ouvintes.Add(novoOuvinte);
 
             Console.WriteLine($"Ouvinte '{novoOuvinte.Nome}' com o email '{novoOuvinte.Email}' adicionado com sucesso!");
             Thread.Sleep(2000);
-          
             MenuOuvinte.ExibirMenuOuvinte();
+        }
+
+        public static List<Ouvinte> ObterOuvintes()
+        {
+            return ouvintes;
         }
 
         public static void ExibirOuvintes()
