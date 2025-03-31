@@ -8,23 +8,27 @@ namespace LogicaSoundFY.Modelos
 {
     internal class Playlist
     {
-        public string Nome { get; set; }
-        public List<Musica> Musicas { get; set; }
-        public void ExibirPlaylist()
+        public static void AdicionarPlaylist()
         {
-            Console.WriteLine($"Nome: {Nome}");
-            foreach (var musica in Musicas)
-            {
-                musica.ExibirMusica();
-            }
+            Console.WriteLine("Digite o nome do album: ");
+            Console.WriteLine("Digite as músicas do album: ");
         }
-        public void AdicionarMusica(Musica musica)
+
+        public static void ListarPlaylists()
         {
-            Musicas.Add(musica);
+            Console.WriteLine("Lista de playlists: ");
         }
-        public void RemoverMusica(Musica musica)
+
+        public static void ExcluirPlaylist()
         {
-            Musicas.Remove(musica);
+            Console.WriteLine("Digite o nome do album: ");
+        }
+
+        public static void EditarPlaylist()
+        {
+            Console.WriteLine("Digite o nome do album: ");
+            Console.WriteLine("Digite o novo nome do album: ");
+            Console.WriteLine("Digite as músicas do album: ");
         }
     }
 }

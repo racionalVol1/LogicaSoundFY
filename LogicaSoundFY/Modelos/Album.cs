@@ -9,27 +9,34 @@ namespace LogicaSoundFY.Modelos
     internal class Album
     {
         public string Nome { get; set; }
-        public string Artista { get; set; }
-        public List<Musica> Musicas { get; set; }
-       
-        public void ExibirAlbum()
+        public string Musicas { get; set; }
+
+        public static void AdicionarAlbum()
         {
-            Console.WriteLine($"Nome: {Nome}");
-            Console.WriteLine($"Artista: {Artista}");
-            foreach (var musica in Musicas)
-            {
-                musica.ExibirMusica();
-            }
+           
+
         }
 
-        public void AdicionarMusica(Musica musica)
+        public static void ListarAlbuns()
         {
-            Musicas.Add(musica);
+            Console.WriteLine("Lista de albuns: ");
+
         }
 
-        public void RemoverMusica(Musica musica)
+        public static void ExcluirAlbum()
         {
-            Musicas.Remove(musica);
+            Console.WriteLine("Digite o nome do album: ");
+            string NomeAlbum = Console.ReadLine()!;
+
+        }
+
+        public static void EditarAlbum()
+        {
+            Console.WriteLine("Digite o nome do album: ");
+            string NomeAlbum = Console.ReadLine()!;
+            Console.WriteLine("Digite o novo nome do album: ");
+            Console.WriteLine("Digite as músicas do album: ");
         }
     }
 }
+

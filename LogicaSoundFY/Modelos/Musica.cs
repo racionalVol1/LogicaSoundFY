@@ -13,24 +13,18 @@ namespace LogicaSoundFY.Modelos
         public string Album { get; set; }
         public string Genero { get; set; }
 
-        public void ExibirMusica()
+        public Musica(string nome, string artista, string album, string genero)
         {
-            Console.WriteLine($"Nome: {Nome}");
-            Console.WriteLine($"Artista: {Artista}");
-            Console.WriteLine($"Album: {Album}");
-            Console.WriteLine($"Genero: {Genero}");
-        }
-
-        public void AdcionarMusica()
+            Nome = nome;
+            Artista = artista;
+            Album = album;
+            Genero = genero;
+        }   
+        
+        public static void OuvirMusica()
         {
-            Console.Write("Digite o nome da música: ");
-            Nome = Console.ReadLine()!;
-            Console.Write("Digite o nome do artista: ");
-            Artista = Console.ReadLine()!;
-            Console.Write("Digite o nome do album: ");
-            Album = Console.ReadLine()!;
-            Console.Write("Digite o genero da música: ");
-            Genero = Console.ReadLine()!;
+            Console.WriteLine("Digite o nome da música: ");
+            
         }
     }
 }
