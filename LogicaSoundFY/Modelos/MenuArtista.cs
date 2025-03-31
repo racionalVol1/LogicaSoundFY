@@ -6,37 +6,45 @@ using System.Threading.Tasks;
 
 namespace LogicaSoundFY.Modelos
 {
-    internal class MenuAdm
+    internal class MenuArtista
     {
-        public static void ExibirMenuAdm() 
+        public static void ExibirMenuArtista()
         {
             Console.Clear();
-            Console.WriteLine("Bem vindo ADM");
-            Console.WriteLine("1 - Listar usuarios");
-            Console.WriteLine("2 - Listar artistas");
-            Console.WriteLine("3 - Excluir usuario ou artista");
-            Console.WriteLine("4 - Voltar ao menu principal");
+            Console.WriteLine("Bem vindo Artista");
+            Console.WriteLine("1 - Cadastrar album");
+            Console.WriteLine("2 - Listar albuns");
+            Console.WriteLine("3 - Excluir album");
+            Console.WriteLine("4 - Editar album");
+            Console.WriteLine("5 - Voltar ao menu principal");
+            Console.WriteLine("6 - Sair");
             Console.Write("Opção: ");
             string opcao = Console.ReadLine()!;
             switch (opcao)
             {
                 case "1":
-                    CadastroOuvinte.ExibirOuvintes();
+                    Album.AdicionarAlbum();
                     break;
                 case "2":
-                    CadastroArtista.ExibirArtistas();
+                    Album.ExcluirAlbum();
                     break;
                 case "3":
-                    FuncoesAdm.ExcluirUsuarioOuArtista();
+                    Album.ListarAlbuns();
                     break;
                 case "4":
+                    Album.EditarAlbum();
+                    break;
+                case "5":
                     MenuInicial.ExibirMenuInicial();
+                    break;
+                case "6":
+                    Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("Opção inválida");
                     Console.WriteLine("Pressione qualquer tecla para tentar novamente...");
                     Console.ReadKey();
-                    ExibirMenuAdm();
+                    ExibirMenuArtista();
                     break;
             }
         }

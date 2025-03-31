@@ -14,6 +14,9 @@ namespace LogicaSoundFY.Modelos
             Console.WriteLine("Bem vindo ao SounFY");
             Console.WriteLine("1 - Entrar como ADM");
             Console.WriteLine("2 - Entrar como Ouvinte");
+            Console.WriteLine("3 - Entrar como artista");
+            Console.WriteLine("4 - Sair");
+
             Console.Write("Opção: ");
             string opcao = Console.ReadLine()!;
             switch (opcao)
@@ -22,7 +25,13 @@ namespace LogicaSoundFY.Modelos
                     MenuAdm.ExibirMenuAdm();
                     break;
                 case "2":
-                    MenuOuvinte.ExibirMenuOuvinte();
+                    CadastroOuvinte.InformacoesOuvintes();
+                    break;
+                case"3":
+                    CadastroArtista.InformacoesArtistas();
+                    break;
+                case "4":
+                    Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("Opção inválida");
