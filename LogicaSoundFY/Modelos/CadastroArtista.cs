@@ -45,6 +45,11 @@ namespace LogicaSoundFY.Modelos
             Console.ReadKey();
             MenuAdm.ExibirMenuAdm();
         }
+
+        internal static void ExcluirArtista(Artista artistaParaExcluir)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

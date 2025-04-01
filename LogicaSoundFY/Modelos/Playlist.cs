@@ -8,6 +8,15 @@ namespace LogicaSoundFY.Modelos
 {
     internal class Playlist
     {
+
+        public Playlist(string nome)
+        {
+            Nome = nome;
+        }
+
+        public string Nome { get; set; }
+        public List<Musica> Musicas { get; set; }
+
         public static void AdicionarPlaylist()
         {
             Console.WriteLine("Digite o nome do album: ");

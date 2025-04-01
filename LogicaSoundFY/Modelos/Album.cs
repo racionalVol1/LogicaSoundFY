@@ -8,7 +8,14 @@ namespace LogicaSoundFY.Modelos
 {
     internal class Album
     {
-        public string Nome { get; set; }
+
+        public Album(string nome)
+        {
+            Nome = nome;
+        }
+
+        private string Nome { get; set; }
+        public List<Musica> Musica { get; set; }
 
         public static void AdicionarAlbum()
         {

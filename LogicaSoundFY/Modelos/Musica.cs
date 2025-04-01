@@ -11,10 +11,18 @@ namespace LogicaSoundFY.Modelos
     internal class Musica
     {
 
-        public string Nome { get; set; }
-        public string Artista { get; set; }
-        public string Album { get; set; }
-        public string Genero { get; set; }
+        public Musica(string nome, string artista, string album, string genero)
+        {
+            Nome = nome;
+            Artista = artista;
+            Album = album;
+            Genero = genero;
+        }
+
+        private string Nome { get; set; }
+        private string Artista { get; set; }
+        private string Album { get; set; }
+        private string Genero { get; set; }
 
         public static void AdicionarMusica()
         {

@@ -8,13 +8,14 @@ namespace LogicaSoundFY.Modelos
 {
     internal class Artista
     {
-        public string Nome { get; set; }
-        public string Genero { get; set; }
-
-        public Artista(string nome, string genero)
+        public Artista(string nome)
         {
             Nome = nome;
-            Genero = genero;
         }
+
+        public string Nome { get; set; }
+        public List<Album> Albuns { get; set; }     
+
+
     }
 }

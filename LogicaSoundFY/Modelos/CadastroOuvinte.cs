@@ -46,5 +46,10 @@ namespace LogicaSoundFY.Modelos
 
             MenuAdm.ExibirMenuAdm();
         }
+
+        internal static void ExcluirOuvinte(Ouvinte ouvinteParaExcluir)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
