@@ -8,48 +8,28 @@ namespace LogicaSoundFY.Modelos
 {
     internal class CadastroOuvinte
     {
-        private static List<Ouvinte> ouvintes = new List<Ouvinte>();
+        private List<Ouvinte> ouvintes = new List<Ouvinte>();
+        
+        public List<Ouvinte> Ouvintes
+        {
+            get { return ouvintes; }
+            set { ouvintes = value; }
+        }
 
-        public static void InformacoesOuvintes()
+        public void GuardaOuvinteNaLista()
         {
             Console.Clear();
-            Console.WriteLine("Qual o nome do ouvinte?");
+            Console.WriteLine("Qual o nome do Ouvinte ou banda?");
             string nomeOuvinte = Console.ReadLine()!;
 
-            Console.WriteLine("Qual o email do ouvinte?");
-            string emailOuvinte = Console.ReadLine()!;
-
-            Ouvinte novoOuvinte = new Ouvinte(nomeOuvinte, emailOuvinte);
+          
+            Ouvinte novoOuvinte = new Ouvinte(nomeOuvinte); 
 
             ouvintes.Add(novoOuvinte);
 
-            Console.WriteLine($"Ouvinte '{novoOuvinte.Nome}' com o email '{novoOuvinte.Email}' adicionado com sucesso!");
+            Console.WriteLine($"Ouvinte '{novoOuvinte.Nome}' adicionado com sucesso!");
             Thread.Sleep(2000);
             MenuOuvinte.ExibirMenuOuvinte();
-        }
-
-        public static List<Ouvinte> ObterOuvintes()
-        {
-            return ouvintes;
-        }
-
-        public static void ExibirOuvintes()
-        {
-            Console.Clear();
-            Console.WriteLine("Lista de Ouvintes Cadastrados:");
-            foreach (var ouvinte in ouvintes)
-            {
-                Console.WriteLine($"Nome: {ouvinte.Nome}, Email: {ouvinte.Email}");
-            }
-            Console.WriteLine("Pressione qualquer tecla para continuar...");
-            Console.ReadKey();
-
-            MenuAdm.ExibirMenuAdm();
-        }
-
-        internal static void ExcluirOuvinte(Ouvinte ouvinteParaExcluir)
-        {
-            throw new NotImplementedException();
         }
     }
 }

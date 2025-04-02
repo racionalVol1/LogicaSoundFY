@@ -5,11 +5,19 @@ namespace LogicaSoundFY.Modelos
 {
     internal class Ouvinte
     {
+        private string nomeOuvinte;
+
         public Ouvinte(string nome, string email)
         {
             Nome = nome;
             Email = email;
         }
+
+        public Ouvinte(string nomeOuvinte)
+        {
+            this.nomeOuvinte = nomeOuvinte;
+        }
+
         public string Nome { get; set; }
         public string Email { get; set; }
 

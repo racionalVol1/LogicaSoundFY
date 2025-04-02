@@ -26,9 +26,12 @@ namespace LogicaSoundFY.Modelos
 
 
 
-        // public static void OuvirMusica()
-        // {
-          
-        // }
+        public void ListarMusicas()
+        {
+            Console.WriteLine($"Nome: {Nome}");
+            Console.WriteLine($"Artista: {Artista}");
+            Console.WriteLine($"Album: {Album}");
+            Console.WriteLine($"Genero: {Genero}");
+        }
     }
 }

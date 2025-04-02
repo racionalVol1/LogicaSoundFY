@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace LogicaSoundFY.Modelos
 {
     internal class MenuInicial
@@ -25,10 +26,10 @@ namespace LogicaSoundFY.Modelos
                     MenuAdm.ExibirMenuAdm();
                     break;
                 case "2":
-                    CadastroOuvinte.InformacoesOuvintes();
+                    new CadastroOuvinte().GuardaOuvinteNaLista();
                     break;
                 case"3":
-                    CadastroArtista.InformacoesArtistas();
+                    new CadastroArtista().GuardaArtistaNaLista();
                     break;
                 case "4":
                     Environment.Exit(0);
