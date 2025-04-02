@@ -22,18 +22,13 @@ namespace LogicaSoundFY.Modelos
         private string Nome { get; set; }
         private string Artista { get; set; }
         private string Album { get; set; }
-        private string Genero { get; set; }
-
-        public static void AdicionarMusica()
-        {
-            
-        }
+        private string Genero { get; set; }     
 
 
 
-        public static void OuvirMusica()
-        {
+        // public static void OuvirMusica()
+        // {
           
-        }
+        // }
     }
 }

@@ -15,29 +15,23 @@ namespace LogicaSoundFY.Modelos
         }
 
         private string Nome { get; set; }
-        public List<Musica> Musica { get; set; }
+        public List<Musica> Musicas { get; set; } = new List<Musica>();
 
-        public static void AdicionarAlbum()
+        public void AdicionarMusica(Musica musica)
         {
-
+            Musicas.Add(musica);
         }
 
-        public static void ListarAlbuns()
+        public void RemoverMusica(Musica musica)
         {
-            Console.Clear();                 
-
+            Musicas.Remove(musica);
         }
 
-        public static void ExcluirAlbum()
+        public string ListarMusicas()
         {
-           
-
-        }
-
-        public static void EditarAlbum()
-        {
-           
-        }
+            string albumComMusicas = Musicas.Count.ToString();
+            return albumComMusicas.ToString();
+        }    
     }
 }
 
