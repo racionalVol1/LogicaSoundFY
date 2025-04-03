@@ -1,5 +1,7 @@
 ﻿using System;
-using LogicaSoundFY.Modelos;
+using LogicaSoundFY.Models;
+using LogicaSoundFY.Services;
+
 
 namespace LogicaSoundFY
 {
