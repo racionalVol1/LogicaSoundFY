@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicaSoundFY.Modelos
 {
-    internal class Artista
+    public class Artista
     {
         private List<Album> ListaDeAlbuns = new List<Album>();
 

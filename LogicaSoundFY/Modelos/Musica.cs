@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LogicaSoundFY.Modelos
 {
-    internal class Musica
+    public class Musica
     {
 
         public Musica(string nome, string artista, string album, string genero)

@@ -1,42 +1,28 @@
-﻿using System;
-using LogicaSoundFY.Modelos;
+﻿using LogicaSoundFY.Modelos;
 
 namespace LogicaSoundFY
 {
     class Program
     {
-        public void ExibirMenuInicial()
+        static void Main(string[] args)
         {
+            Ouvinte ouvinte = new Ouvinte("João");
+            Playlist playlist = new Playlist("Minha Playlist");
+            Album album = new Album("Album 1", "Artista 1");
 
-            Console.WriteLine("Bem-vindo ao LogicaSoundFY!");
-            Console.WriteLine("Selecione uma opção:");
-            Console.WriteLine("1. Criar um novo álbum");
-            Console.WriteLine("2. Adicionar música a um álbum existente");
-            Console.WriteLine("3. Listar músicas de um álbum");
-            Console.WriteLine("4. Sair");
+            Musica musica1 = new Musica("Musica 1", "Artista 1", "Album 1", "Pop");
+            Musica musica2 = new Musica("Musica 2", "Artista 2", "Album 2", "Rock");
 
-            Console.Write("Opção: ");
-            string opcao = Console.ReadLine();
-            switch (opcao)
-            {
-                case "1":
-                    CriarAlbum();
-                    break;
-                case "2":
-                    AdicionarMusicaAoAlbum();
-                    break;
-                case "3":
-                    ListarMusicasDoAlbum();
-                    break;
-                case "4":
-                    Console.WriteLine("Saindo...");
-                    Environment.Exit(0);
-                    break;
-                default:
-                    Console.WriteLine("Opção inválida. Tente novamente.");
-                    ExibirMenuInicial();
-                    break;
-            }
-        }
+            album.AdicionarMusica(musica1);
+            album.AdicionarMusica(musica2);
+
+            playlist.AdicionarMusica(musica1);
+            playlist.AdicionarMusica(musica2);
+
+            ouvinte.AdicionarPlaylist(playlist);
+
+            ouvinte.ListarPlaylists();
+            
+        }        
     }  
 }

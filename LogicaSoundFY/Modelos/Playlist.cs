@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LogicaSoundFY.Modelos
 {
-    internal class Playlist
+    public class Playlist
     {
         private List<Musica> ListaDeMusicas = new List<Musica>();
         public Playlist(string nome )
