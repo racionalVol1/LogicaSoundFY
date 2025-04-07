@@ -5,38 +5,26 @@ namespace LogicaSoundFY.Modelos
 {
     internal class Ouvinte
     {
-        private string nomeOuvinte;
-
-        public Ouvinte(string nome, string email)
+        private List<Playlist> ListaDePlaylists = new List<Playlist>();
+        public Ouvinte(string nome)
         {
-            Nome = nome;
-            Email = email;
-        }
-
-        public Ouvinte(string nomeOuvinte)
-        {
-            this.nomeOuvinte = nomeOuvinte;
+            Nome = nome;            
         }
 
         public string Nome { get; set; }
-        public string Email { get; set; }
-
-        public List<Playlist> Playlists { get; set; } = new List<Playlist>();
 
         public void AdicionarPlaylist(Playlist playlist)
         {
-            Playlists.Add(playlist);
+            ListaDePlaylists.Add(playlist);
         }
 
-        public void RemoverPlaylist(Playlist playlist)
+        public void ListarPlaylists()
         {
-            Playlists.Remove(playlist);
-        }
-
-        public string ListarPlaylists()
-        {
-            string ouvinteComPlaylists = Playlists.Count.ToString();
-            return ouvinteComPlaylists;
-        }     
+            foreach (var playlist in ListaDePlaylists)
+            {
+                Console.WriteLine($"Playlist: {playlist.Nome}");
+                playlist.ListarMusicas();
+            }
+        }   
     }
 } 

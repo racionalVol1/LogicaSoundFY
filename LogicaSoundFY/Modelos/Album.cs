@@ -8,30 +8,29 @@ namespace LogicaSoundFY.Modelos
 {
     internal class Album
     {
-
-        public Album(string nome)
+        private List<Musica> ListaDeMusicas = new List<Musica>();
+        public Album(string nome, string artista)
         {
             Nome = nome;
+            Artista = artista;            
         }
 
-        private string Nome { get; set; }
-        public List<Musica> Musicas { get; set; } = new List<Musica>();
+        public string Nome { get; set; }
+        public string Artista { get; set; }
+      
 
         public void AdicionarMusica(Musica musica)
         {
-            Musicas.Add(musica);
+            ListaDeMusicas.Add(musica);
         }
 
-        public void RemoverMusica(Musica musica)
+        public void ListarMusicas()
         {
-            Musicas.Remove(musica);
-        }
-
-        public string ListarMusicas()
-        {
-            string albumComMusicas = Musicas.Count.ToString();
-            return albumComMusicas.ToString();
-        }    
-    }
+            foreach (var musica in ListaDeMusicas)
+            {
+                musica.ListarMusicas();
+            }
+        } 
+    } 
 }
 
